@@ -1,8 +1,8 @@
 <% form_for @post do |p| %>
-  <%= p.label :title %>
+  <%= p.label 'Title' %>
   <%= p.text_field :title
-  <%= p.content :content %>
-  <%= p.text_field :content %>
+  <%= p.content 'Content' %>
+  <%= p.text_area :content %>
 
 
   <%= p.collection_check_boxes :category_ids, Category.all, :id, :name %>
