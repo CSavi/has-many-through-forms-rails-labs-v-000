@@ -24,4 +24,4 @@
   <%= comment.label "Content" %>
   <%= comment.text_area :content %>
 
-  <%= comment.collection_select :, Category.all, :id, :name %>
+  <%= comment.collection_select :users, Users.all, :id, :username %>
