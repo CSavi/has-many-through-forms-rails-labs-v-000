@@ -4,4 +4,5 @@
   <%= p.content :content %>
   <%= p.text_field :content %>
 
-  
+
+  <%= p.collection_check_boxes :category_ids, Category.all, :id, 
