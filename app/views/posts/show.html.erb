@@ -24,7 +24,7 @@
 
 <h2>New Comment:</h2>
 
-<%= form_for @post.comments do |c| %>
+<%= form_for @post.comments.build do |c| %>
   <%= c.label "Content" %>
   <%= c.text_area :content %>
 
