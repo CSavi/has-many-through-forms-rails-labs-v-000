@@ -2,11 +2,11 @@
 
 <h2>Content: <%= @post.content %></h2>
 
-<h2>Comments:</h2>
+<h2>New Comment:</h2>
 
 <ul>
-  <% @post.comments.each do |comment| %>
-  <li><%= comment.user.username %> says: <%= comment.content %></li>
+  <% @post.users.each do |user| %>
+  <li><%= user.username %> says: <%= user.content %></li>
   <% end %>
 </ul>
 
