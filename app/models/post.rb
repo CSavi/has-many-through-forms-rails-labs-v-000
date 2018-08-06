@@ -8,8 +8,8 @@ class Post < ActiveRecord::Base
   def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
       category = Category.find_or_create_by(category_attribute)
-      self.category << category 
-    end 
+      self.category << category
+    end
   end     
 
 
