@@ -1,4 +1,5 @@
 <%= render 'form', post: Post.new %>
 
 <% form_for @post do |p| %>
-  <%= p.
+  <%= p.title :title %>
+  <%= p.content :content %>
