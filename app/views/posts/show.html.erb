@@ -21,4 +21,6 @@
 <h2>New Comment:</h2>
 
 <% form_for @post.comment do |comment| %>
-  <%= comment.
+  <%= comment.label "Content" %>
+  <%= comment.text_area :content %>
+  <%= comment.collection_check_boxes :category_ids, Category.all, :id, :name %>
