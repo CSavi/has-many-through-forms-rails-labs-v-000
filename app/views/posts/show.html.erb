@@ -30,6 +30,8 @@
 
   <%= comment.fields_for :users, comment.users.build do |user_fields| %>
     <%= user_fields.text_field :username %>
-  <% end %>  
+  <% end %>
+
+  <% comment.submit %>  
 
 <% end %>
