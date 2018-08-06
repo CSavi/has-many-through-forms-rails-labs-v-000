@@ -25,11 +25,10 @@
 <h2>New Comment:</h2>
 
 <%= form_for @post.comments do |c| %>
-  <%= c.hidden_field :post_id, :value => @post.id %>
   <%= c.label "Content" %>
   <%= c.text_area :content %>
 
-  <%= c.collection_select :user_id, Users.all, :id, :username, include_blank: 'Choose a user' %>
+  <%= c.collection_select :user_id, User.all, :id, :username, include_blank: 'Choose a user' %>
 
 
   <%= c.fields_for :users, c.users.build do |user_fields| %>
