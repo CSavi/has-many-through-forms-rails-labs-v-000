@@ -20,18 +20,18 @@
 
 <h2>New Comment:</h2>
 
-<% form_for @post.comment do |comment| %>
-  <%= comment.hidden_field :post_id, :value => @post.id %>
-  <%= comment.label "Content" %>
-  <%= comment.text_area :content %>
+<% form_for @post.comment do |c| %>
+  <%= c.hidden_field :post_id, :value => @post.id %>
+  <%= c.label "Content" %>
+  <%= c.text_area :content %>
 
-  <%= comment.collection_select :users, Users.all, :id, :username, include_blank: 'Choose a user' %>
+  <%= c.collection_select :users, Users.all, :id, :username, include_blank: 'Choose a user' %>
 
 
-  <%= comment.fields_for :users, comment.users.build do |user_fields| %>
+  <%= c.fields_for :users, c.users.build do |user_fields| %>
     <%= user_fields.text_field :username %>
   <% end %>
 
-  <% comment.submit %>  
+  <% c.submit %>  
 
 <% end %>
