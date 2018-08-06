@@ -20,7 +20,7 @@
 
 <h2>New Comment:</h2>
 
-<% form_for @post.comment do |c| %>
+<%= form_for @post.comment do |c| %>
   <%= c.hidden_field :post_id, :value => @post.id %>
   <%= c.label "Content" %>
   <%= c.text_area :content %>
@@ -32,6 +32,6 @@
     <%= user_fields.text_field :username %>
   <% end %>
 
-  <% c.submit %>  
+  <% c.submit %>
 
 <% end %>
