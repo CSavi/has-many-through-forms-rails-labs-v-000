@@ -1,3 +1,3 @@
 <% form_for @post do |p| %>
-  <%= p.collection_select :title, Title.all, :id,  %>
+  <%= p.label :title %>
   <%= p.content :content %>
