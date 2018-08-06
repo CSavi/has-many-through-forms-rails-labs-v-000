@@ -28,7 +28,7 @@
   <%= c.collection_select :users, Users.all, :id, :username, include_blank: 'Choose a user' %>
 
 
-  <%= c.fields_for :user_id, c.users.build do |user_fields| %>
+  <%= c.fields_for :users, c.users.build do |user_fields| %>
     <%= user_fields.text_field :username %>
   <% end %>
 
