@@ -1,5 +1,1 @@
 <%= render 'form', post: Post.new %>
-
-<% form_for @post do |p| %>
-  <%= p.collection_select :title, Title.all, :id,  %>
-  <%= p.content :content %>
