@@ -16,7 +16,11 @@
   <% end %>
 </ul>
 
-
+<ul>
+  <% @post.categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %> 
+</ul>    
 
 <h2>New Comment:</h2>
 
