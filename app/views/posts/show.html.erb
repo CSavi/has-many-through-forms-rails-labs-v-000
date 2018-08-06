@@ -20,11 +20,12 @@
 
 <h2>New Comment:</h2>
 
-<% form_for @post.comment do |comment| %>
+<% form_for @post.comment.build do |comment| %>
+  <%= comment.hidden_field :
   <%= comment.label "Content" %>
   <%= comment.text_area :content %>
 
   <%= comment.collection_select :users, Users.all, :id, :username, include_blank: 'Choose a user' %>
 
 
-<% end %>  
+<% end %>
