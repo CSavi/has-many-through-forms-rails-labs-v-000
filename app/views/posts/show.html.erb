@@ -29,9 +29,10 @@
   <%= c.text_area :content %>
 
   <%= c.collection_select :user_id, User.all, :id, :username %>
+  <%= c.hidden_field :post_id %>
 
 
-  <%= c.fields_for :users, c.users.build do |user_fields| %>
+  <%= c.fields_for :user, c.users.build do |user_fields| %>
     <%= user_fields.text_field :username %>
   <% end %>
 
