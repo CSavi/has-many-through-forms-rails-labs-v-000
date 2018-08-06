@@ -23,5 +23,5 @@
 <% form_for @post.comment do |comment| %>
   <%= comment.label "Content" %>
   <%= comment.text_area :content %>
-  
-  <%= comment.collection_check_boxes :category_ids, Category.all, :id, :name %>
+
+  <%= comment.collection_select :, Category.all, :id, :name %>
