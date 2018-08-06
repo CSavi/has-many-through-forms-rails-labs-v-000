@@ -26,5 +26,8 @@
 
   <%= comment.collection_select :users, Users.all, :id, :username, include_blank: 'Choose a user' %>
 
+  <%= comment.hidden_field :post_id %>
+  <%= comment.fields_for :user, 
+
 
 <% end %>
